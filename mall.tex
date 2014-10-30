@@ -4,10 +4,16 @@
 \setdefaultlanguage{swedish}
 \usepackage{datetime}
 \renewcommand{\dateseparator}{-}
+\usepackage{hyperref}
 
 \title{Rubrik}
 \author{Författare}
 %\date{\today\ (\currenttime)}
+
+\hypersetup{
+  pdftitle={\thetitle}
+  pdfauthor={\theauthor}
+}
 
 \begin{document}
 \maketitle
