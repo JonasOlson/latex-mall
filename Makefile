@@ -5,4 +5,4 @@ $(DOCUMENT).pdf : $(DOCUMENT).tex
 
 .PHONY : clean
 clean :
-	rm -rf $(DOCUMENT).aux $(DOCUMENT).log $(DOCUMENT).pdf texput.log
+	rm -rf $(DOCUMENT).aux $(DOCUMENT).log $(DOCUMENT).pdf $(DOCUMENT).out texput.log
