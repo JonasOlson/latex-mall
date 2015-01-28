@@ -1,7 +1,7 @@
 DOCUMENT=mall
 
 $(DOCUMENT).pdf : $(DOCUMENT).tex
-	xelatex "$<"
+	lualatex --shell-escape "$<"
 
 .PHONY : clean
 clean :

@@ -10,6 +10,15 @@
 \usepackage{datetime}
 \renewcommand{\dateseparator}{-}
 \usepackage[inline]{enumitem}
+
+% Paketet svg möjliggör SVG-bilder, och kräver också några rader bugfix.
+\usepackage{pdftexcmds}
+\makeatletter
+\let\pdfstrcmp\pdf@strcmp
+\let\pdffilemoddate\pdf@filemoddate
+\makeatother
+\usepackage{svg}
+
 \usepackage{hyperref}
 
 \title{Rubrik}
@@ -20,6 +29,9 @@
   pdftitle={\thetitle},
   pdfauthor={\theauthor}
 }
+
+% Gör att mellanslag i bildfilnamn fungerar.
+\usepackage[space]{grffile}
 
 \begin{document}
 \maketitle
@@ -33,17 +45,32 @@
 \section{Section}
 
 % Lista i löpande text
-En Renult består av
-\begin{enumerate}
-\item fyra hjul och
-\item en bult.
-\end{enumerate}
 Kroppens fyra delar är
-\begin{enumerate*}[label=(\alph*)]
+\begin{enumerate}
 \item huvud,
 \item axlar,
 \item knä och
 \item tå.
+\end{enumerate}
+En Renult består av
+\begin{enumerate*}[label=(\alph*)]
+\item fyra hjul och
+\item en bult.
 \end{enumerate*}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\textwidth]{b änk.jpeg}
+\caption{Vad betyder detta?}
+\label{fig:bänk}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+%\includegraphics[width=0.9\textwidth]{bänk.jpeg}
+\includesvg[width=0.5\textwidth]{Smithdiagram}
+\caption{Smithdiagram}
+\label{fig:smith}
+\end{figure}
 
 \end{document}
