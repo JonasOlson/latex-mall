@@ -9,6 +9,7 @@
 \setdefaultlanguage{swedish}
 \usepackage{datetime}
 \renewcommand{\dateseparator}{-}
+\usepackage[inline]{enumitem}
 \usepackage{hyperref}
 
 \title{Rubrik}
@@ -31,6 +32,18 @@
 \section{Section}
 \section{Section}
 
-Text
+% Lista i löpande text
+En Renult består av
+\begin{enumerate*}[label=(\alph*)]
+\item fyra hjul och
+\item en bult.
+\end{enumerate*}
+Kroppens fyra delar är
+\begin{enumerate*}[label=(\arabic*)]
+\item huvud,
+\item axlar,
+\item knä och
+\item tå.
+\end{enumerate*}
 
 \end{document}
