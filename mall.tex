@@ -33,6 +33,11 @@
 % Gör att mellanslag i bildfilnamn fungerar.
 \usepackage[space]{grffile}
 
+% Matematik
+\usepackage[intlimits]{mathtools}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+
 \begin{document}
 \maketitle
 
@@ -58,10 +63,47 @@ En Renult består av
 \item en bult.
 \end{enumerate*}
 
+Newton säger oss att $\mathbf{F}_i = -(\mathbf{r}-\mathbf{r}_i)Gmm_i/|\mathbf{r}-\mathbf{r}_i|^3$ och därutöver att
+\begin{align}
+\mathbf{F} = \sum_{i=0}^{n-1} \mathbf{F}_i, \\
+\mathbf{F} = m\mathbf{a}
+\end{align}
+där
+\begin{align}
+\mathbf{a} &= \dot{\mathbf{v}}, \nonumber \\
+&= \ddot{\mathbf{r}}.
+\end{align}
+
+\begin{subequations}
+\begin{align}
+  f(x) =
+  \begin{dcases*}
+      \int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x & om $\int_0^\infty$ är positiv\\
+    -x & annars
+  \end{dcases*}
+\end{align}
+
+\begin{align}
+  f(x) =
+  \begin{dcases}
+    \int_0^\infty, & \int_0^\infty > 0 \\
+    x, & x < 0
+  \end{dcases}
+\end{align}
+
+\begin{align}
+  f(x) =
+  \begin{cases}
+    \int_0^\infty, & \int_0^\infty > 0 \\
+    x, & x < 0
+  \end{cases}
+\end{align}
+\end{subequations}
+
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.9\textwidth]{bänk.jpeg}
-\caption{Vad betyder detta?}
+\caption{Ad majorem\,--\,finstrukturkonstanten\,--\,Dei gloriam}
 \label{fig:bänk}
 \end{figure}
 
