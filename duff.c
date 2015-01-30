@@ -1,4 +1,4 @@
-// Ekvation: $x^2=y$
+// Matematiska uttryck i kommentarer: $x^2=y$
 send(to, from, count)
 register short *to, *from;
 register count;

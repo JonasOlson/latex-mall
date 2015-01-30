@@ -46,15 +46,14 @@
 \begin{document}
 \maketitle
 
-\chapter{Chapter}
-\section{Section}
-\section{Section}
-
-\chapter{Chapter}
-\section{Section}
-\section{Section}
+\chapter{Listor}
 
 % Lista i löpande text
+En Renult består av
+\begin{enumerate*}[label=(\alph*)]
+\item fyra hjul och
+\item en bult.
+\end{enumerate*}
 Kroppens fyra delar är
 \begin{enumerate}
 \item huvud,
@@ -62,16 +61,13 @@ Kroppens fyra delar är
 \item knä och
 \item tå.
 \end{enumerate}
-En Renult består av
-\begin{enumerate*}[label=(\alph*)]
-\item fyra hjul och
-\item en bult.
-\end{enumerate*}
 
-Newton säger oss att $\mathbf{F}_i = -(\mathbf{r}-\mathbf{r}_i)Gmm_i/|\mathbf{r}-\mathbf{r}_i|^3$ och därutöver att
+\chapter{Matematik}
+
+Newton säger oss att $\mathbf{F}_i = -Gmm_i(\mathbf{r}-\mathbf{r}_i)/|\mathbf{r}-\mathbf{r}_i|^3$ och därutöver att
 \begin{align}
-\mathbf{F} = \sum_{i=0}^{n-1} \mathbf{F}_i, \\
-\mathbf{F} = m\mathbf{a}
+\mathbf{F} = \sum_{i=0}^{n-1} \mathbf{F}_i, \label{eq:kraftsumma} \\
+\mathbf{F} = m\mathbf{a} \label{eq:newton}
 \end{align}
 där
 \begin{align}
@@ -80,30 +76,34 @@ där
 \end{align}
 
 \begin{subequations}
+\label{eq:subequations}
 \begin{align}
-  f(x) =
+  a &=
   \begin{dcases*}
       \int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x & om $\int_0^\infty$ är positiv\\
     -x & annars
   \end{dcases*}
-\end{align}
-
-\begin{align}
-  f(x) =
+  \label{eq:dcases*} \\
+  f(x) &=
   \begin{dcases}
     \int_0^\infty, & \int_0^\infty > 0 \\
     x, & x < 0
   \end{dcases}
-\end{align}
-
-\begin{align}
-  f(x) =
+  \label{eq:dcases} \\
+  f(x^2z+3\times 84) &=
   \begin{cases}
     \int_0^\infty, & \int_0^\infty > 0 \\
     x, & x < 0
   \end{cases}
+  \label{eq:cases}
 \end{align}
 \end{subequations}
+
+Hänvisning till ekvationer: \ref{eq:kraftsumma} \ref{eq:newton} \ref{eq:subequations} \ref{eq:dcases*} \ref{eq:dcases} \ref{eq:cases}
+
+\chapter{Flytande objekt}
+
+En JPEG-bild (figur~\ref{fig:bänk}), en SVG-bild (figur~\ref{fig:smith}) och en tabell (tabell~\ref{tab:stilla}).
 
 \begin{figure}[ht]
 \centering
@@ -140,9 +140,16 @@ lördag & påskafton \\
 \end{table}
 
 \appendix
-\chapter{Chapter}
+\chapter{Kodutskrift}
 
-% Kod från fil
+Kod direkt i LaTeX-dokumentet:
+
+\begin{minted}[bgcolor=Ivory]{python3}
+[x**2 for x in range(10)]
+\end{minted}
+
+Kod från fil, och med andra utseendeinställningar:
+
 \inputminted[
 mathescape=true, % Möjliggör matematiska uttryck i kommentarer
 label=duff.c,
@@ -154,8 +161,5 @@ fontsize=\footnotesize,
 linenos
 ]{c}{duff.c}
 
-% Kod direkt i LaTeXdokumentet
-\begin{minted}[bgcolor=Ivory]{python3}
-[x**2 for x in range(10)]
-\end{minted}
+
 \end{document}
