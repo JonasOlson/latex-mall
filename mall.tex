@@ -11,6 +11,8 @@
 \renewcommand{\dateseparator}{-}
 \usepackage[inline]{enumitem}
 
+\usepackage[hyperref, table, dvipsnames, svgnames, x11names]{xcolor}
+
 % Paketet svg möjliggör SVG-bilder, och kräver också några rader bugfix.
 \usepackage{pdftexcmds}
 \makeatletter
@@ -18,6 +20,17 @@
 \let\pdffilemoddate\pdf@filemoddate
 \makeatother
 \usepackage{svg}
+
+% Gör att mellanslag i bildfilnamn fungerar.
+\usepackage[space]{grffile}
+
+% Matematik
+\usepackage[intlimits]{mathtools}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+
+% Kodlistning
+\usepackage{minted}
 
 \usepackage{hyperref}
 
@@ -29,14 +42,6 @@
   pdftitle={\thetitle},
   pdfauthor={\theauthor}
 }
-
-% Gör att mellanslag i bildfilnamn fungerar.
-\usepackage[space]{grffile}
-
-% Matematik
-\usepackage[intlimits]{mathtools}
-\usepackage{amssymb}
-\usepackage{mathrsfs}
 
 \begin{document}
 \maketitle
@@ -134,4 +139,23 @@ lördag & påskafton \\
 \label{tab:stilla}
 \end{table}
 
+\appendix
+\chapter{Chapter}
+
+% Kod från fil
+\inputminted[
+mathescape=true, % Möjliggör matematiska uttryck i kommentarer
+label=duff.c,
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=GhostWhite,
+fontsize=\footnotesize,
+linenos
+]{c}{duff.c}
+
+% Kod direkt i LaTeXdokumentet
+\begin{minted}[bgcolor=Ivory]{python3}
+[x**2 for x in range(10)]
+\end{minted}
 \end{document}

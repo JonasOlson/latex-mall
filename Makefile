@@ -1,6 +1,6 @@
 DOCUMENT=mall
 
-$(DOCUMENT).pdf : $(DOCUMENT).tex
+$(DOCUMENT).pdf : $(DOCUMENT).tex duff.c
 	lualatex --shell-escape "$<"
 
 .PHONY : clean
