@@ -64,42 +64,56 @@ Kroppens fyra delar är
 
 \chapter{Matematik}
 
-Newton säger oss att $\mathbf{F}_i = -Gmm_i(\mathbf{r}-\mathbf{r}_i)/|\mathbf{r}-\mathbf{r}_i|^3$ och därutöver att
+\section{Olika sätt att justera ekvationer}
+\begin{gather}
+a_0+a_1=b_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather}
 \begin{align}
-\mathbf{F} = \sum_{i=0}^{n-1} \mathbf{F}_i, \label{eq:kraftsumma} \\
-\mathbf{F} = m\mathbf{a} \label{eq:newton}
+a_0+a_1&=b_1\\
+a_2&=b_2+c_2-d_2+e_2
 \end{align}
-där
-\begin{align}
-\mathbf{a} &= \dot{\mathbf{v}}, \nonumber \\
-&= \ddot{\mathbf{r}}.
-\end{align}
+\section{Radbruten ekvation}
+\begin{gather}
+\begin{multlined}[b]
+s+s+s+s+s+s+s+s+s+s+s+s+s\\
++t+t+t+t+t+t+t+t+t+t
+\end{multlined}\\
+a=b
+\end{gather}
 
+\section{Vektorer och delekvationer}
+Newton säger oss att $\mathbf{F}_i = -Gmm_i(\mathbf{r}-\mathbf{r}_i)/|\mathbf{r}-\mathbf{r}_i|^3$ och därutöver att
 \begin{subequations}
 \label{eq:subequations}
+\begin{gather}
+\mathbf{F} = \sum_{i=0}^{n-1} \mathbf{F}_i, \label{eq:kraftsumma} \\
+\mathbf{F} = m\mathbf{a} \label{eq:kraftlag}, \\
+\mathbf{a} = \dot{\mathbf{v}} = \ddot{\mathbf{r}}.
+\end{gather}
+\end{subequations}
+Hänvisningar till ekvationer: \ref{eq:subequations} \ref{eq:kraftsumma} \ref{eq:kraftlag}. En fet grek: $\boldsymbol{\beta}$.
+
+\section{Flerfallsfunktioner och inskjuten text}
+
 \begin{align}
   a &=
   \begin{dcases*}
       \int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x & om $\int_0^\infty$ är positiv\\
     -x & annars
-  \end{dcases*}
-  \label{eq:dcases*} \\
+  \end{dcases*} \\
   f(x) &=
   \begin{dcases}
     \int_0^\infty, & \int_0^\infty > 0 \\
     x, & x < 0
-  \end{dcases}
-  \label{eq:dcases} \\
+  \end{dcases} \\
+\shortintertext{och slutligen}
   f(x^2z+3\times 84) &=
   \begin{cases}
     \int_0^\infty, & \int_0^\infty > 0 \\
     x, & x < 0
   \end{cases}
-  \label{eq:cases}
 \end{align}
-\end{subequations}
-
-Hänvisning till ekvationer: \ref{eq:kraftsumma} \ref{eq:newton} \ref{eq:subequations} \ref{eq:dcases*} \ref{eq:dcases} \ref{eq:cases}
 
 \chapter{Flytande objekt}
 
