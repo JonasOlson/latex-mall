@@ -1,6 +1,6 @@
 DOCUMENT=mall
 
-$(DOCUMENT).pdf : $(DOCUMENT).tex duff.c Smithdiagram.svg bänk.jpeg
+$(DOCUMENT).pdf : $(DOCUMENT).tex listings/duff.c Smithdiagram.svg bänk.jpeg
 	lualatex --shell-escape "$<"
 
 .PHONY : clean
