@@ -1,7 +1,10 @@
 \documentclass[a4paper, article, oneside, leqno]{memoir}
 
+\usepackage{attachfile}
+\attachfilesetup{color=0 0 0.9}
 \makeatletter
-\def\@arabic#1{\number\numexpr#1-1\relax}
+\def\@arabic#1{\number\numexpr#1-1\relax} % Numrera från noll
+\renewcommand*{\theatfi@tmp}{\the\value{atfi@tmp}} % Workaround för att attachfile ska fungera trots omdefinieringen av arabic
 \makeatother
 
 \usepackage{fontspec}
@@ -29,7 +32,7 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 
-\usepackage[unicode]{hyperref}
+\usepackage{hyperref}
 
 % Kodlistning
 \usepackage[minted, skins, breakable]{tcolorbox}
@@ -89,7 +92,7 @@
 }
 \renewcommand{\theFancyVerbLine}{\rmfamily\textcolor{GhostWhite!50!black}{\tiny\arabic{FancyVerbLine}}} % Utseende för radnumrering i kod
 
-\newtcbinputlisting{externallisting}[3]{listing file={#2#3}, minted options={label={#3}}, minted language={#1}}
+\newtcbinputlisting{externallisting}[3]{listing file={#2#3}, minted options={label=\textattachfile{#2#3}{#3}}, minted language={#1}}
 
 \newtcblisting{internallisting}[1]{minted language=#1}
 
@@ -98,9 +101,11 @@
 %\date{\today\ (\currenttime)}
 
 \hypersetup{
+  unicode,
   pdftitle={\thetitle},
   pdfauthor={\theauthor}
 }
+
 
 \begin{document}
 \maketitle
