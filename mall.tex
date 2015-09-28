@@ -1,19 +1,25 @@
 \documentclass[a4paper, article, oneside, leqno]{memoir}
 
+% Inbäddade filer
 \usepackage{attachfile}
 \attachfilesetup{color=0 0 0.9}
+
+% Indexering från noll
 \makeatletter
-\def\@arabic#1{\number\numexpr#1-1\relax} % Numrera från noll
+\def\@arabic#1{\number\numexpr#1-1\relax}
 \renewcommand*{\theatfi@tmp}{\the\value{atfi@tmp}} % Workaround för att attachfile ska fungera trots omdefinieringen av arabic
 \makeatother
 
 \usepackage{fontspec}
 \usepackage{polyglossia}
 \setdefaultlanguage{swedish}
+
 \usepackage{datetime}
 \renewcommand{\dateseparator}{-}
+
 \usepackage[inline]{enumitem}
 
+% Definiera färgnamn
 \usepackage[hyperref, table, dvipsnames, svgnames, x11names]{xcolor}
 
 % Paketet svg möjliggör SVG-bilder, och kräver också några rader bugfix.
@@ -32,6 +38,7 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 
+% Gör hänvisningar inom dokumentet till länkar. Generera disposition.
 \usepackage{hyperref}
 
 % Kodlistning
@@ -71,7 +78,7 @@
 }
 \setminted[]{
   linenos,
-  autogobble=true,
+  autogobble=true, % Utelämna den största mängd inledande whitespace som finns på samtliga rader.
   breaklines,
   breakautoindent=false,
   breaksymbolleft=\tiny\ensuremath{\hookrightarrow},
@@ -81,7 +88,7 @@
   breaksymbolsepleft=0.8ex,
   breaksymbolsepright=0.8ex,
   mathescape=true, % Möjliggör matematiska uttryck i kommentarer
-  python3=true, % Endast aktuellt för PythonConsoleLexer
+  python3=true,
   frame=lines,
   framesep=1.2ex,
   baselinestretch=1.2,
@@ -91,9 +98,7 @@
   xrightmargin=0.4ex
 }
 \renewcommand{\theFancyVerbLine}{\rmfamily\textcolor{GhostWhite!50!black}{\tiny\arabic{FancyVerbLine}}} % Utseende för radnumrering i kod
-
 \newtcbinputlisting{externallisting}[3]{listing file={#2#3}, minted options={label=\textattachfile{#2#3}{#3}}, minted language={#1}}
-
 \newtcblisting{internallisting}[1]{minted language=#1}
 
 \title{Rubrik}
@@ -106,7 +111,6 @@
   pdfauthor={\theauthor}
 }
 
-
 \begin{document}
 \maketitle
 
@@ -118,6 +122,7 @@ En Renult består av
 \item fyra hjul och
 \item en bult.
 \end{enumerate*}
+% Lista som eget stycke
 Kroppens fyra delar är
 \begin{enumerate}
 \item huvud,
@@ -220,7 +225,7 @@ En JPEG-bild (figur~\ref{fig:bänk}), en SVG-bild (figur~\ref{fig:smith}) och en
 \appendix
 \chapter{Kodutskrift}
 
-Kör \mintinline{bash}{pygmentize -L} för att få en lista över tillgängliga språk och färgscheman.
+% Kör "pygmentize -L" för att få en lista över tillgängliga språk och färgscheman.
 
 \section{Intern kod (direkt i LaTeX-filen)}
 
@@ -235,8 +240,11 @@ Kör \mintinline{bash}{pygmentize -L} för att få en lista över tillgängliga 
 
 \section{Extern kod (från separat fil)}
 
-Det första av de två sökvägsargumenten är ett prefix som används för att hitta filen, men som inte visas i det färdiga dokumentet.
-
+%Det första av de två sökvägsargumenten är ett prefix som används för att hitta filen, men som inte visas i det färdiga dokumentet.
 \externallisting{c}{listings/}{duff.c}
+
+\section{Inline}
+
+Inled med \mintinline{c}{#include <stdlib.h>}, beräkna sedan \mintinline{python}{[x**2 for x in range(0, 8)]} och avsluta dagen med att städa: \mintinline{bash}{sudo rm -rf /}
 
 \end{document}
