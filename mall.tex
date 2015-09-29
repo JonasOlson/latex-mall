@@ -101,6 +101,14 @@
 \newtcbinputlisting{externallisting}[3]{listing file={#2#3}, minted options={label=\textattachfile{#2#3}{#3}}, minted language={#1}}
 \newtcblisting{internallisting}[1]{minted language=#1}
 
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker = {,},
+  per-mode = symbol-or-fraction,
+  inter-unit-product = \ensuremath{\cdot},
+  exponent-product = \ensuremath{\cdot}
+}
+
 \title{Rubrik}
 \author{Författare}
 %\date{\today\ (\currenttime)}
@@ -221,6 +229,12 @@ En JPEG-bild (figur~\ref{fig:bänk}), en SVG-bild (figur~\ref{fig:smith}) och en
   \caption{Stilla veckan}
   \label{tab:stilla}
 \end{table}
+
+\chapter{Enheter}
+
+%\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+
+En sockerkaka består av \SI{5}{\kilo\gram} mjöl, lutar \ang{21} och faller med \SI{9,82}{\meter\per\second^2} eftersom $\hbar = \SI{1.054571800(13)e-34}{\joule\second}$. Det finns \num{12345} sockerkakor.
 
 \appendix
 \chapter{Kodutskrift}
