@@ -18,7 +18,7 @@ Enheter
 
 Gjort val: `siunitx`
 
-Enligt vad folk skriver är detta paket efterträdare eller på annat sätt öerlägset `SIstyle`, `SIunits`, `unitsdef`, `units`, `hepunits`, `fancyunits` och `cjwunits`.
+Enligt vad folk skriver är detta paket efterträdare eller på annat sätt överlägset `SIstyle`, `SIunits`, `unitsdef`, `units`, `hepunits`, `fancyunits` och `cjwunits`.
 
 Kodlistning
 --
