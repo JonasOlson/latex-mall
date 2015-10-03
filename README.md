@@ -57,3 +57,10 @@ Typsnitt
 Gjort val: `fontspec`
 
 Både `inputenc` och `fontenc` hör till en äldre metod.
+
+Språk
+--
+
+Gjort val: `polyglossia`
+
+Ersätter `babel`.
