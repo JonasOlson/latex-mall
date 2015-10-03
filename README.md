@@ -1,6 +1,13 @@
 LaTeX-mall
 =============
 
+Kompileringskommando
+--
+
+Gjort val: `lualatex`
+
+Både `lualatex` och `xelatex` modernare och snyggare än `pdflatex`. Av dessa verkar `lualatex` vara det som mest har framtiden för sig.
+
 Documentclass
 --
 
