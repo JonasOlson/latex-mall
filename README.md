@@ -1,34 +1,34 @@
-LaTeX-mall
-=============
+# LaTeX-mall
 
-Kompileringskommando
---
+
+## Kompileringskommando
+
 
 Gjort val: `lualatex`
 
 Både `lualatex` och `xelatex` modernare och snyggare än `pdflatex`. Av dessa verkar `lualatex` vara det som mest har framtiden för sig.
 
-Documentclass
---
+## Documentclass
+
 
 Gjort val: `memoir`
 
 Denna verkar vara mest kapabel och kunna allt standardklasserna och KOMA-klasserna kan.
 
-Indexering
---
+## Indexering
+
 
 Från noll.
 
-Enheter
---
+## Enheter
+
 
 Gjort val: `siunitx`
 
 Enligt vad folk skriver är detta paket efterträdare eller på annat sätt överlägset `SIstyle`, `SIunits`, `unitsdef`, `units`, `hepunits`, `fancyunits` och `cjwunits`.
 
-Kodlistning
---
+## Kodlistning
+
 
 Gjort val: `tcolorbox`, som ritar bakgrundsfärgen och anropar `minted`, som färlägger koden med hjälp av det externa programmet `pygmentize`, cachar resultatet och anropar `fancyvrb`, som gör den slutgiltiga typsättningen.
 
@@ -39,8 +39,8 @@ Det finns även andra paket som färglägger kod:
 * `pygmentex`: Cachar. Ej utvärderat.
 * `pythontex`: Cachar. Den kan även kompilera kod och visa resultatet. Möjligt alternativ. Ej utvärderat.
 
-Inbäddning av filer i PDF:en
---
+## Inbäddning av filer i PDF:en
+
 
 Gjort val: `attachfile`
 
@@ -51,15 +51,15 @@ Andra möjligheter:
 * `embedfile`: Samma upphovsman som `attachfile2`. Lägger till filer som bilagor till PDF:en, inte som länkar.
 * `navigator`: Gör många PDF-relaterade saker, däribland bilagor och möjligen också länkar till inbäddade filer. Kolliderar med `tcolorbox`.
 
-Typsnitt
---
+## Typsnitt
+
 
 Gjort val: `fontspec`
 
 Både `inputenc` och `fontenc` hör till en äldre metod.
 
-Språk
---
+## Språk
+
 
 Gjort val: `polyglossia`
 
