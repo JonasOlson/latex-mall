@@ -50,3 +50,10 @@ Andra möjligheter:
 * `attachfile2`: Ska väl vara bättre, men liksom `attachfile` kolliderar den med nollindexeringen och workarounden fungerar bara med `attachfile`.
 * `embedfile`: Samma upphovsman som `attachfile2`. Lägger till filer som bilagor till PDF:en, inte som länkar.
 * `navigator`: Gör många PDF-relaterade saker, däribland bilagor och möjligen också länkar till inbäddade filer. Kolliderar med `tcolorbox`.
+
+Typsnitt
+--
+
+Gjort val: `fontspec`
+
+Både `inputenc` och `fontenc` hör till en äldre metod.
