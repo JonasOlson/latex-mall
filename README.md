@@ -4,14 +4,14 @@
 ## Kompileringskommando
 
 
-Gjort val: `lualatex`
+Vald metod: `lualatex`
 
 Både `lualatex` och `xelatex` modernare och snyggare än `pdflatex`. Av dessa verkar `lualatex` vara det som mest har framtiden för sig.
 
 ## Documentclass
 
 
-Gjort val: `memoir`
+Vald medot: `memoir`
 
 Denna verkar vara mest kapabel och kunna allt standardklasserna och KOMA-klasserna kan.
 
@@ -23,14 +23,14 @@ Från noll.
 ## Enheter
 
 
-Gjort val: `siunitx`
+Vald metod: `siunitx`
 
 Enligt vad folk skriver är detta paket efterträdare eller på annat sätt överlägset `SIstyle`, `SIunits`, `unitsdef`, `units`, `hepunits`, `fancyunits` och `cjwunits`.
 
 ## Kodlistning
 
 
-Gjort val: `tcolorbox`, som ritar bakgrundsfärgen och anropar `minted`, som färlägger koden med hjälp av det externa programmet `pygmentize`, cachar resultatet och anropar `fancyvrb`, som gör den slutgiltiga typsättningen.
+Vald metod: `tcolorbox`, som ritar bakgrundsfärgen och anropar `minted`, som färlägger koden med hjälp av det externa programmet `pygmentize`, cachar resultatet och anropar `fancyvrb`, som gör den slutgiltiga typsättningen.
 
 I stället för `tcolorbox` kunde `framed`, `mdframed` eller `boites` ha använts, men `tcolorbox` förefaller vara den mest kompetenta kandidaten. Version 2.0 eller senare av `minted` krävs, vilket kan ordnas lokalt genom att lägga filen `minted.sty` i arbetskatalogen.
 
@@ -42,7 +42,7 @@ Det finns även andra paket som färglägger kod:
 ## Inbäddning av filer i PDF:en
 
 
-Gjort val: `attachfile`
+Vald metod: `attachfile`
 
 Har problem med filnamn som inte håller sig till ASCII.
 
@@ -54,13 +54,13 @@ Andra möjligheter:
 ## Typsnitt
 
 
-Gjort val: `fontspec`
+Vald metod: `fontspec`
 
 Både `inputenc` och `fontenc` hör till en äldre metod.
 
 ## Språk
 
 
-Gjort val: `polyglossia`
+Vald metod: `polyglossia`
 
 Ersätter `babel`.
