@@ -32,7 +32,7 @@ Enligt vad folk skriver är detta paket efterträdare eller på annat sätt öve
 
 Vald metod: `tcolorbox`, som ritar bakgrundsfärgen och anropar `minted`, som färlägger koden med hjälp av det externa programmet `pygmentize`, cachar resultatet och anropar `fancyvrb`, som gör den slutgiltiga typsättningen.
 
-I stället för `tcolorbox` kunde `framed`, `mdframed` eller `boites` ha använts, men `tcolorbox` förefaller vara den mest kompetenta kandidaten. Version 2.0 eller senare av `minted` krävs, vilket kan ordnas lokalt genom att lägga filen `minted.sty` i arbetskatalogen.
+I stället för `tcolorbox` kunde `framed`, `mdframed` eller `boites` ha använts, men `tcolorbox` förefaller vara den mest kompetenta kandidaten. Version 2.0 eller senare av `minted` krävs, vilket kan ordnas lokalt genom att lägga filen [`minted.sty`](https://raw.githubusercontent.com/gpoore/minted/5219a9c8db6d8b9c1e7c3aeab892ab0f6fc74308/source/minted.sty) i arbetskatalogen.
 
 Det finns även andra paket som färglägger kod:
 * `verbments`: Cachar, men verkar inte kunna ta ett filnamn som argument, endast kod direkt i LaTeX-filen. Typsätter med fancyvrb och framed. Det är oklart om den kan göra radbrytningar och om det går att ställa in marginaler som önskat.
