@@ -1,7 +1,14 @@
 # LaTeX-mall
 
 
-## Kompileringskommando
+## Byggkommando
+
+
+Vald metod: `latexmk`
+
+Närmaste kända ekvivalent är `rubber`, men `latexmk` tycks ha minst lika bra funktionalitet och vara minst lika aktivt utvecklat. Alternativet `arara` verkar vara inriktat på att manuellt ställa in kompileringsregler för enskilda filer, vilket vi inte har användning för här.
+
+## LaTeX-motor
 
 
 Vald metod: `lualatex`
