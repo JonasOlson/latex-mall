@@ -7,7 +7,7 @@
 % Indexering från noll
 \makeatletter
 \def\@arabic#1{\number\numexpr#1-1\relax}
-\renewcommand*{\tsheatfi@tmp}{\the\value{atfi@tmp}} % Workaround för att attachfile ska fungera trots omdefinieringen av arabic
+%\renewcommand*{\theatfi@tmp}{\the\value{atfi@tmp}} % Workaround för att attachfile ska fungera trots omdefinieringen av arabic
 \makeatother
 
 \usepackage{fontspec}
