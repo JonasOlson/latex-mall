@@ -2,4 +2,6 @@ install:
     - sudo apt-get install texlive-full latexmk python-pygments
 
 script:
+    - uname -a
+    - printenv
     - make
