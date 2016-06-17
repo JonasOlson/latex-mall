@@ -1,7 +1,7 @@
 DOCUMENT=mall
 
 $(DOCUMENT).pdf : $(DOCUMENT).tex listings/duff.c Smithdiagram.svg bänk.jpeg
-	latexmk -pdflatex="lualatex --shell-escape %O %S" -pdf -dvi- -ps- "$<"
+	latexmk -pdflatex="lualatex --halt-on-error --shell-escape %O %S" -pdf -dvi- -ps- "$<"
 
 .PHONY : minted
 minted : minted.sty
