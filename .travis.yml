@@ -8,7 +8,7 @@ before_install:
     - uname -a
     - printenv
     - sudo apt-get -qq update
-    - sudo apt-get install -y texlive-full latexmk python-pygments
+    - sudo apt-get install -y texlive-full latexmk python-pygments inkscape
 
 install:
     - make minted
