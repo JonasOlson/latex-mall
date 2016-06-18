@@ -8,5 +8,8 @@ before_install:
     - sudo apt-get -qq update
     - sudo apt-get install -y texlive-full latexmk python-pygments
 
+install:
+    - make minted
+
 script:
     - make
