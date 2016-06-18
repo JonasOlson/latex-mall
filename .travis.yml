@@ -5,8 +5,6 @@ before_install:
     - lsb_release -a
     - uname -a
     - printenv
-
-install:
     - sudo apt-get -qq update
     - sudo apt-get install -y texlive-full latexmk python-pygments
 
