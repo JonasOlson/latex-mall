@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 
 before_install:
+    - lsb_release -a
     - uname -a
     - printenv
 
