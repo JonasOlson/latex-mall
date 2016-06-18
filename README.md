@@ -1,5 +1,6 @@
 # LaTeX-mall
 
+[![Build Status](https://travis-ci.org/JonasOlson/latex-mall.svg?branch=master)](https://travis-ci.org/JonasOlson/latex-mall)
 
 ## Byggkommando
 
