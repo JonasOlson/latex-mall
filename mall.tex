@@ -248,7 +248,7 @@ En sockerkaka består av \SI{5}{\kilo\gram} mjöl, lutar \ang{21} och faller med
 \section{Intern kod (direkt i LaTeX-filen)}
 
 \begin{internallisting}{haskell}
-  f x = map (\f -> f x) f
+  let baklängesmap f x = map (\f -> f x) f
   let a x = baklängesmap [sin, cos] x
   let b x = map (\x -> x^2) x
   let c x = foldl (+) 0 x
