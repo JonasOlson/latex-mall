@@ -14,7 +14,7 @@ Närmaste kända ekvivalent är `rubber`, men `latexmk` tycks ha minst lika bra 
 
 Vald metod: `lualatex`
 
-Både `lualatex` och `xelatex` modernare och snyggare än `pdflatex`. Av dessa verkar `lualatex` vara det som mest har framtiden för sig.
+Både `lualatex` och `xelatex` är modernare och snyggare än `pdflatex`. Av dessa verkar `lualatex` vara det som mest har framtiden för sig.
 
 ## Documentclass
 
