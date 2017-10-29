@@ -19,7 +19,7 @@ Både `lualatex` och `xelatex` modernare och snyggare än `pdflatex`. Av dessa v
 ## Documentclass
 
 
-Vald medot: `memoir`
+Vald metod: `memoir`
 
 Denna verkar vara mest kapabel och kunna allt standardklasserna och KOMA-klasserna kan.
 
