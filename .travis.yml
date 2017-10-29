@@ -1,14 +1,19 @@
 sudo: required
 dist: trusty
-
 language: generic
+
+addons:
+  apt:
+    packages:
+      - texlive-full
+      - latexmk
+      - python-pygments
+      - inkscape
 
 before_install:
     - lsb_release -a
     - uname -a
     - printenv
-    - sudo apt-get -qq update
-    - sudo apt-get install -y texlive-full latexmk python-pygments inkscape
 
 install:
     - make minted
