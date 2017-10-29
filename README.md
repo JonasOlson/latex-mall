@@ -7,13 +7,11 @@ En minnesanteckning om hur man gör saker i LaTeX på de modernaste, snyggaste o
 
 ## Byggkommando
 
-
 Vald metod: `latexmk`
 
 Närmaste kända ekvivalent är `rubber`, men `latexmk` tycks ha minst lika bra funktionalitet och vara minst lika aktivt utvecklat. Alternativet `arara` verkar vara inriktat på att manuellt ställa in kompileringsregler för enskilda filer, vilket vi inte har användning för här.
 
 ## LaTeX-motor
-
 
 Vald metod: `lualatex`
 
@@ -21,25 +19,21 @@ Både `lualatex` och `xelatex` är modernare och snyggare än `pdflatex`. Av des
 
 ## Documentclass
 
-
 Vald metod: `memoir`
 
 Denna verkar vara mest kapabel och kunna allt standardklasserna och KOMA-klasserna kan.
 
 ## Indexering
 
-
 Från noll.
 
 ## Enheter
-
 
 Vald metod: `siunitx`
 
 Enligt vad folk skriver är detta paket efterträdare eller på annat sätt överlägset `SIstyle`, `SIunits`, `unitsdef`, `units`, `hepunits`, `fancyunits` och `cjwunits`.
 
 ## Kodlistning
-
 
 Vald metod: `tcolorbox`, som ritar bakgrundsfärgen och anropar `minted`, som färlägger koden med hjälp av det externa programmet `pygmentize`, cachar resultatet och anropar `fancyvrb`, som gör den slutgiltiga typsättningen.
 
@@ -52,7 +46,6 @@ Det finns även andra paket som färglägger kod:
 
 ## Inbäddning av filer i PDF:en
 
-
 Vald metod: `attachfile`
 
 Har problem med filnamn som inte håller sig till ASCII.
@@ -64,13 +57,11 @@ Andra möjligheter:
 
 ## Typsnitt
 
-
 Vald metod: `fontspec`
 
 Både `inputenc` och `fontenc` hör till en äldre metod.
 
 ## Språk
-
 
 Vald metod: `polyglossia`
 
