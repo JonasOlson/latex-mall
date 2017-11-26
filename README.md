@@ -8,7 +8,7 @@ En minnesanteckning om hur man gör saker i LaTeX på de modernaste, snyggaste o
 
 I till exempel Ubuntu 17.10 fås allt man behöver genom `sudo apt install texlive-full latexmk python-pygments inkscape`.
 
-Somliga system har en för gammal version av LaTeX-paketet `minted` (minst version 2.0 krävs). Detta avhjälps genom att man kör `make minted`, vilket laddar ner en lämplig version lokalt för just detta dokument.
+Somliga system har en alltför gammal version av LaTeX-paketet `minted` (minst version 2.0 krävs). Detta avhjälps genom att man kör `make minted`, vilket laddar ner en lämplig version lokalt för just detta dokument.
 
 ## Bakgrund till några av de val som gjorts
 
