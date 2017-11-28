@@ -10,6 +10,10 @@ I till exempel Ubuntu 17.10 fås allt man behöver genom `sudo apt install texli
 
 Somliga system har en alltför gammal version av LaTeX-paketet `minted` (minst version 2.0 krävs). Detta avhjälps genom att man kör `make minted`, vilket laddar ner en lämplig version lokalt för just detta dokument.
 
+## Körinstruktion
+
+    make
+
 ## Bakgrund till några av de val som gjorts
 
 ### Byggkommando
