@@ -15,8 +15,5 @@ before_install:
     - uname -a
     - printenv
 
-install:
-    - make minted
-
 script:
     - make

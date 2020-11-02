@@ -8,8 +8,6 @@ En minnesanteckning om hur man gör saker i LaTeX på de modernaste, snyggaste o
 
 I Ubuntu 20.04 fås allt man behöver genom `sudo apt install texlive-full python-is-python3 inkscape`.
 
-Somliga system har en alltför gammal version av LaTeX-paketet `minted` (minst version 2.0 krävs). Detta avhjälps genom att man kör `make minted`, vilket laddar ner en lämplig version lokalt för just detta dokument.
-
 ## Körinstruktion
 
     make
