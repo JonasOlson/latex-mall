@@ -1,13 +1,12 @@
 sudo: required
-dist: trusty
+dist: focal
 language: generic
 
 addons:
   apt:
     packages:
       - texlive-full
-      - latexmk
-      - python-pygments
+      - python-is-python3
       - inkscape
 
 before_install:
