@@ -1,6 +1,10 @@
 \documentclass[a4paper, article, oneside, leqno]{memoir}
 
-\usepackage{luatex85} % Ordnar kompatibilitet mellan ny LuaTeX och gamla paket.
+% Ordnar kompatibilitet mellan ny LuaTeX och gamla paket.
+\usepackage{luatex85}
+
+% Ger tillgång till sökväg där resulterande fill placeras
+\usepackage{currfile}
 
 % Inbäddade filer
 \usepackage{attachfile}
@@ -39,6 +43,7 @@
 \usepackage{hyperref}
 
 % Kodlistning
+\usepackage[cachedir=\currfiledir/minted_cache]{minted}
 \usepackage[minted, skins, breakable]{tcolorbox}
 \tcbset{
   breakable,
@@ -104,7 +109,7 @@
 \let\pdfstrcmp\pdf@strcmp
 \let\pdffilemoddate\pdf@filemoddate
 \makeatother
-\usepackage{svg}
+\usepackage[inkscapepath=\currfiledir/svg-inkscape]{svg}
 
 % Enheter
 \usepackage{siunitx}
