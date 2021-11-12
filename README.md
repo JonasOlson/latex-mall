@@ -1,6 +1,6 @@
 # LaTeX-mall
 
-[![Build Status](https://travis-ci.com/JonasOlson/latex-mall.svg?branch=master)](https://travis-ci.com/JonasOlson/latex-mall)
+[![Build Status](https://app.travis-ci.com/JonasOlson/latex-mall.svg?branch=master)](https://app.travis-ci.com/JonasOlson/latex-mall)
 
 En minnesanteckning om hur man gör saker i LaTeX på de modernaste, snyggaste och mest kapabla sätten.
 
