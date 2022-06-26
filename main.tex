@@ -124,8 +124,15 @@
   exponent-product = \ensuremath{\cdot}
 }
 
-\makeoddhead{plain}{}{}{}
-\makeoddfoot{plain}{}{\thepage}{}
+\makeoddhead{plain}
+            {Ver: \input{|"./version \languagename"}}
+            {}
+            {}
+\makeoddfoot{plain}
+            {}
+            {\thepage}
+            {}
+\makeheadrule{plain}{\textwidth}{0.4pt}
 
 \title{Rubrik}
 \author{Författare}

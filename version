@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+# Detta skript skriver ut en versionssträng utifrån versionstaggar i Git och
+# repositoriets nuvarande förhållande till dessa. Skriptet kan anropas från
+# LaTeX-dokumentet för att infoga versionsinformation på lämpliga ställen.
+#
+# Versionstaggarna mäste börja med ett "v" och följas av tre
+# punktseparerade tal, till exempel "v2.3.0". Sådana taggar kan skapas så här:
+#
+#     git tag --annotate --message="" v2.3.0
+#
+# Exempel på versionssträngar som detta skript producerar:
+#
+# - 2.3.0
+# - working copy based on 2.3.0, commit 640d3d6
+# - working copy based on 2.3.0, commit 640d3d6-dirty
+# - commit 640d3d6
+# - commit 640d3d6-dirty
+#
+# Ett önskat språk kan givas som argument till skriptet:
+#
+#     version swedish
+
+set -o errexit -o nounset -o pipefail
+
+default_language="swedish"
+
+declare -A msg_unversioned=(
+    ["swedish"]='ej versionshanterat'
+    ["english"]='unversioned'
+)
+declare -A msg_commit=(
+    ["swedish"]='"${2}"'
+    ["english"]='"${2}"'
+)
+declare -A msg_working_copy=(
+    ["swedish"]='\\texttt{"${3}"}, baserad på "${2}"'
+    ["english"]='\\texttt{"${3}"}, based on "${2}"'
+)
+declare -A msg_tag=(
+    ["swedish"]='"${2}"'
+    ["english"]='"${2}"'
+)
+
+language="${1:-}"
+
+function print() {
+    if ! [[ -v "${1}"["${language}"] ]]; then
+	language="${default_language}"
+    fi
+    eval eval echo "\${"${1}"["${language}"]}"
+}
+
+if ! git rev-parse &>/dev/null ||
+	! git rev-parse HEAD &>/dev/null; then
+    # Detta är inte ett Git-repositorium eller så finns ingen commit.
+    print msg_unversioned
+    exit
+fi
+
+commit=$(git describe --match="" --always --dirty="-dirty")
+
+if tag=$(git -c versionsort.suffix="-RC" tag --list --merged=HEAD --sort=-version:refname "v*" |
+	     head -n 1 |
+	     grep '.*'); then
+    latest_version=$(echo "${tag}" | sed -n -E "s/^v(.*)$/\1/p")
+    if [[ $(git rev-list --max-count=1 tags/"${tag}") != $(git rev-list --max-count=1 HEAD) ]] ||
+	   ! git diff --quiet; then
+	# Vi befinner oss på en "arbetskopia", dvs antingen är vi inte
+	# på den versionstaggade committen eller så har vi
+	# o-committade ändringar ("dirty").
+	#
+	# Om vi vill betrakta även närvaro av o-trackade filer som
+	# skäl till att betrakta tillståndet som "dirty" kan vi, i
+	# stället för att kolla diffen, testa om `git status --short`
+	# skriver ut något.
+	#echo working copy based on "${latest_version}", commit \\texttt{"${commit}"}
+	print msg_working_copy "${latest_version}" "${commit}"
+    else
+	# Vi befinner oss direkt på en versionstaggad, omodifierad commit.
+	print msg_tag "${latest_version}"
+    fi
+else
+    # Versionstagg finns inte.
+    print msg_commit "${commit}"
+fi
